@@ -27,6 +27,10 @@ RUN find /var/cache/nginx -type d -exec chmod g+x {} +
 RUN chgrp -R 0 /run
 RUN chmod -R go+rw /run
 
+# change index.html
+RUN mv /var/www/html/index.html /var/www/html/index.html.save
+RUM echo "openshift-test" >> /var/www/html/index.html
+
 USER nginx
 
 # Port
