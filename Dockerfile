@@ -29,7 +29,7 @@ RUN chmod -R go+rw /run
 
 # change index.html
 RUN mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html.save
-RUN echo "openshift-test" >> /usr/share/nginx/html/index.html
+RUN echo "openshift-test 2" >> /usr/share/nginx/html/index.html
 
 USER nginx
 
